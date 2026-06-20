@@ -1,0 +1,37 @@
+Tasks on Heart disease dataset
+
+Load the dataset in a pandas dataframe
+Q1. Rename column V1 to "Serial No"
+Q2. Drop column V2
+Q3. In column V5, V6, V7, V8, and V9 replace -9 with np.nan (NA)
+Q4. In V12 column replace -9 value with mean of this column
+Q5. Replace -9 in all columns with np.nan(NA)
+Q6. Count number of NA in every column
+Q7. Drop columns where percentage of NA is greater than 90%
+Q8. Find columns where number of unique values are less than or equal to 10.
+For example, V4 has two unique values 0 and 1.
+Q9. Find columns where number of unique values are greater than 10.
+For example, V3 has many unique values.
+Q10. Find how many values in V58 are 0, 1 and 2. 
+Q11. In column V58 convert all 2s in 1s.
+Q12. Save  this data frame as a new csv file
+
+
+###########################
+
+# Simple Python
+
+Q1. Write a function. Given list of strings, find unique values and return them
+
+Q2. Write a function. Given list of strings, convert every string to a number using following encoding
+Every string is given a number based on its alphabetical order in given list
+return the converted list
+Ex. l=['A','B','A','D']
+'A' given 0
+'B' given 1
+'D' given 2
+
+O/p return value of function [0,1,0,2]
+
+Q3. Write a function. Given list of numbers 
+find mean, median and mode without using any library.
