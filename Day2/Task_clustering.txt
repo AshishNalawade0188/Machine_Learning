@@ -1,0 +1,18 @@
+case study for clustering :: diamonds.csv
+
+# Aim of case study
+
+- Preprocess the data
+
+- Find the best K for k means using Lbow method
+
+- Draw dendrogram on first 500 rows of data, find best K
+
+- Apply agglomerative clustering
+
+- Calculate silhoutte score for KMeans and Agglomarative clustering
+
+- Change the linkage type in agglomarative clustering and compare silhoutte score
+
+- Change K and compare silhoutte score
+
