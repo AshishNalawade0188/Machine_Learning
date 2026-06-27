@@ -1,0 +1,98 @@
+Principle Component Analysis (PCA)
+
+It is un-supervised learning algorithm
+It extracts linear components from the given data
+Every component is linear combination of all columns in input data
+IT assumes data is standardized before extracting components
+
+The primary objective of PCA is Variance Maximization. 
+The principal components are ordered by the amount of variance they explain in the data.
+
+The eigenvectors are sorted in descending order of their corresponding eigenvalues. 
+This means the eigenvector with the largest eigenvalue becomes PC1, the next largest becomes PC2, and so on.
+
+First Principal Component (PC1): 
+This component captures the maximum possible variance in the dataset. It represents the direction in the data that shows the most spread or variability. Think of it as the "longest" dimension of your data cloud.
+
+Second Principal Component (PC2): 
+This component captures the next highest amount of variance, subject to the constraint that it must be orthogonal (uncorrelated) to PC1.
+
+Subsequent Principal Components (PC3, PC4, etc.): 
+Each subsequent PC explains the maximum remaining variance while being orthogonal to all previously derived PCs.
+
+The principal components themselves are the eigenvectors 
+
+Application:
+PCA is used for dimensionality reduction
+PCA helps in data vizualization by doing projections
+
+Limitations :
+PCA only extracts the linear relationship between columns
+
+#############################################################
+
+Kernel principle component analysis (Kernel PCA)
+
+Kernel PCA is a powerful extension of traditional Principal Component Analysis (PCA) that allows for non-linear dimensionality reduction. 
+
+Kernel Trick :: we never calculate actual data points in higher dimensional space, we only calculate similarity (dot product) between points
+
+Steps in Kernel PCA
+	First kernel matrix for all the points in dataset are calculated
+	Then kernel matrix is centered (normalized)
+	Then eigen vectors and eigen values are calculated
+	Then, eigen vectors (principal components) are ordered by the amount of variance they explain in the data.
+	Settings :: 
+	Select rbf as kernel and  no of components to None to get maximum possible components
+
+Advantage of KPCA::
+	Good for non-linear data dimensionality reduction
+Limitations of KPCA::
+	In big data with lot of samples computational cost is very high
+	Parameters like gamma or d requires careful tuning 
+
+Kernel Functions:: 
+	Linear Kernel: K(x1, x2) = x1 . x2 (dot product)
+	Polynomial Kernel: K(x1, x2) = (gamma * x1 . x2 + coef0)^degree
+	Radial Basis Function (RBF): K(x1,x2)= e ^ - (gamma * ||(x1 - x2)||^2 )
+	Sigmoid Kernel: K(x1, x2) = tanh(gamma * x1 . x2 + coef0)
+	Cosine Kernel K(x1, x2) = (x1 . x2) / (||x1|| * ||x2||)
+
+
+
+
+Linear Kernel:
+	Simple dot product.
+	Equivalent to standard PCA.
+
+Polynomial Kernel
+	Captures feature interactions and curved boundaries.
+
+Radial Basis Function (RBF):(Gaussian Kernel)
+	Measures local similarity.
+	Nearby points become highly similar.
+	It is mostly used kernel
+
+Sigmoid Kernel:
+	Similar to neural network activation.
+
+Cosine Kernel: 
+	measures the cosine of the angle between two vectors.
+
+	K(x, y) = (x . y) / (||x|| * ||y||)
+
+	Where:
+	x and y are input vectors.
+	x . y is the dot product of vectors x and y.
+	||x|| and ||y|| are the Euclidean norms (magnitudes) of vectors x and y respectively.
+
+
+
+ Situation                     			Best Kernel 
+ ----------------------------- 			----------- 
+Linear data                   			Linear      
+Moderate nonlinear data / Image Data    Polynomial  
+Complex data             			    RBF(Gaussian)
+Sparse/text data              			Cosine      
+Deep Fature selection / text data		Sigmoid Kernel
+

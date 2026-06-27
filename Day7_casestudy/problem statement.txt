@@ -1,0 +1,34 @@
+Target : Fitness_Level (Multi class classification)
+
+Drop Columns : ( irrelevent & possible target)
+Obesity_Risk	
+Hypertension_Risk	
+Diabetes_Risk	
+Cardiovascular_Risk	
+Sleep_Disorder_Risk	
+Health_Score	
+Healthy_Aging_Score	
+Wellness_Category	
+Early_Waker
+Depression_Risk_Score
+Gym_Member
+Height_cm
+Weight_kg
+Person_ID
+
+
+Preprocessing :
+Wake_Up_Time -->convert to categorical
+Sleep_Time -->convert to categorical
+Country --> check distribution --> NO NEED OF REMOVAL OF ANY Country -->DONE
+Productivity --> to be discussed
+
+
+Ordinal:
+Workout_Intensity
+Smoking_Status
+Alcohol_Consumption
+
+
+
+

@@ -1,0 +1,37 @@
+Random Projection is a dimensionality reduction technique based on the Johnson–Lindenstrauss lemma (JL lemma):
+High-dimensional data can be projected into lower dimensions 
+while approximately preserving distances.
+
+Properties of Random Projection ::
+| Dimensionality reduction to Reduce number of features / columns 
+| Creates Random projection matrices Using random weights                        
+| Distance preservation between points by Approximately preserving pairwise distances 
+| Unsupervised approach because here No target labels needed                   
+| Fast for high dimensions when compared to PCA                
+| Used before ML models for Preprocessing step, specially to vizualize data
+
+Types of Random Projection::
+1 Gaussian Random Projection
+	uses Dense random matrix
+	Projection matrix entries come from Gaussian distribution.
+2 Sparse Random Projection
+	uses Sparse random matrix
+	Projection matrix contains mostly zeros.
+
+Comparison::
+
+| Feature                | GaussianRandomProjection | SparseRandomProjection       |
+| ---------------------- | ------------------------ | ---------------------------- |
+| Projection matrix      | Dense                    | Sparse                       |
+| Memory usage           | High                     | Low                          |
+| Speed                  | Slower                   | Faster                       |
+| Distance preservation  | Better                   | Slightly weaker              |
+| Sparse data efficiency | Poorer                   | Excellent                    |
+| Computational cost     | Higher                   | Lower                        |
+| Best for               | Image data / Dense data  | text data 
+                                                     /recommendation systems  
+
+
+
+
+

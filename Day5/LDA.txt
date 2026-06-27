@@ -1,0 +1,26 @@
+Linear Discriminant Analysis
+
+Linear Discriminant Analysis, or LDA for short, is a classification machine learning algorithm.
+It is linear model, like logistic regression
+
+It works by calculating summary statistics for the input features by class label, such as the mean and standard deviation. 
+These statistics represent the model learned from the training data. 
+In practice, linear algebra operations are used to calculate the required quantities efficiently via matrix decomposition.
+
+LDA assumes that 
+the input variables are numeric 
+data should be normally distributed
+all columns have the same variance (spread). 
+standardize or normalize the data prior to modeling
+
+It also assumes that the input variables are not correlated
+
+It directly supports multi class classification
+
+LDA is based on Bayesian rule
+
+Limitation:
+It only finds linear boundary in classes
+It cannt handle comple (non-linear) data
+
+
